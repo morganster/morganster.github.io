@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-
     <title>mathbirthdays.com</title>
     <meta name="description" content="This is the awesome mathbirthday app">
     <meta name="author" content="Carlos Eduardo Jaramillo L">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet " href="css/styles.css?v=1.0 ">
     <link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css ">
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -19,46 +17,45 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.js"></script>
-
-
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js "></script>
   <![endif]-->
-
 </head>
 
 <body>
     <div class="container-fluid ">
         <div class="row ">
             <div class="col-md-12">
-                <h1 class="text-center">Welcome To MathBirthdays</h1>
+                <h1 class="text-center">Welcome To MathBirthdays.com</h1>
             </div>
         </div>
         <div class="row ">
             <div class="col-md-10 col-md-offset-1">
                 <div class="well well-lg">
-                    <p class="text-info text-center">hello this app calculate your math birthday!!! so give us your birth date and we will tell you when is your next math bith day xD</p>
+                    <p class="text-info text-center">hello this app calculate your math birthday!!! so give us your birth date and we will tell you when is your next math birth day xD</p>
                 </div>
 
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 col-md-offset-5">
-                <input type="text" id="bday-date" class="form-control">
+                <p>
+                    <input type="text" id="bday-date" class="form-control">
+                </p>
             </div>
         </div>
-        <div class="modal fade" id="res-modal" tabindex="-1" role="dialog" aria-labelledby="your next math birthday!">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <h1 class="text-center text-primary" id="res-text"></h1>
+
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="alert alert-success hidden" role="alert" id="res-alert">
+                    <p class="text-success text-center" id="res-text"></p>
                 </div>
+
             </div>
         </div>
+
     </div>
-
-
 
     <script type="text/javascript ">
         var months = ["January", "February", "March", "April", "May", "June",
@@ -67,31 +64,33 @@
         $("#bday-date").dateDropper();
         $("#bday-date").on('change', function() {
             var res = CalculateMBDay($(this).val());
-            $("#res-text").text("your " + res.n + " math birth day is in " + res.MBDate.getDay() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
-            $("#res-modal").modal("show");
+            $("#res-text").text("Your mathbirthday number " + res.n + " is in " + res.MBDate.getDate() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
+            if ($("#res-alert").hasClass("hidden")) {
+                $("#res-alert").removeClass("hidden");
+            }
 
         });
-
 
         $('#res-modal').on('hidden.bs.modal', function() {
             $("#bday-date").val('');
         })
 
-
         CalculateMBDay = function(bday) {
-
             var presentDate = new Date();
             var MBDate = new Date(bday);
             var oneDay = 24 * 60 * 60 * 1000;
             var diffDays = Math.round(Math.abs((MBDate.getTime() - presentDate.getTime()) / (oneDay)));
-            var n = Math.ceil(Math.log10(diffDays));
+            if (diffDays == 0) {
+                n = 1;
+            } else {
+                var n = Math.ceil(Math.log10(diffDays));
+            }
             var days = Math.pow(10, n);
             MBDate.setDate(MBDate.getDate() + days);
             return {
                 "MBDate": MBDate,
                 "n": n
             };
-
         }
     </script>
 </body>
