@@ -73,7 +73,7 @@
                 $("#res-text").text(res.message);
 
             } else {
-                $("#res-text").text("Your mathbirthday number " + res.n + " is in " + res.MBDate.getDate() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
+                $("#res-text").text("Your mathbirthday number " + res.n + " is your " + res.days + " days old on " + res.MBDate.getDate() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
                 if ($("#res-alert").hasClass("alert-danger")) {
                     $("#res-alert").removeClass("alert-danger");
                     $("#res-alert").addClass("alert-success");
@@ -113,7 +113,8 @@
             return {
                 "MBDate": MBDate,
                 "n": n,
-                error: false
+                "error": false,
+                "days": days
             };
         }
     </script>
