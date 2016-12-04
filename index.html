@@ -36,6 +36,14 @@
                 <h1 class="text-center">Welcome To MathBirthdays</h1>
             </div>
         </div>
+        <div class="row ">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="well well-lg">
+                    <p class="text-info text-center">hello this app calculate your math birthday!!! so give us your birth date and we will tell you when is your next math bith day xD</p>
+                </div>
+
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-2 col-md-offset-5">
                 <input type="text" id="bday-date">
@@ -59,7 +67,6 @@
         $("#bday-date").dateDropper();
         $("#bday-date").on('change', function() {
             var res = CalculateMBDay($(this).val());
-            console.log(CalculateMBDay($(this).val()));
             $("#res-text").text("your " + res.n + " math birth day is in " + res.MBDate.getDay() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
             $("#res-modal").modal("show");
 
@@ -69,6 +76,8 @@
         $('#res-modal').on('hidden.bs.modal', function() {
             $("#bday-date").val('');
         })
+
+
         CalculateMBDay = function(bday) {
 
             var presentDate = new Date();
