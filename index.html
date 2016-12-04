@@ -49,7 +49,7 @@
         <div class="row ">
             <div class="col-md-10 col-md-offset-1">
                 <div class="alert alert-success hidden" role="alert" id="res-alert">
-                    <p class="text-success text-center" id="res-text"></p>
+                    <p class="text-center" id="res-text"></p>
                 </div>
 
             </div>
@@ -63,24 +63,47 @@
         ];
         $("#bday-date").dateDropper();
         $("#bday-date").on('change', function() {
+
             var res = CalculateMBDay($(this).val());
-            $("#res-text").text("Your mathbirthday number " + res.n + " is in " + res.MBDate.getDate() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
+            if (res.error == true) {
+                if ($("#res-alert").hasClass("alert-success")) {
+                    $("#res-alert").removeClass("alert-success");
+                    $("#res-alert").addClass("alert-danger");
+                }
+                $("#res-text").text(res.message);
+
+            } else {
+                $("#res-text").text("Your mathbirthday number " + res.n + " is in " + res.MBDate.getDate() + " of " + months[res.MBDate.getMonth()] + " of " + res.MBDate.getFullYear());
+                if ($("#res-alert").hasClass("alert-danger")) {
+                    $("#res-alert").removeClass("alert-danger");
+                    $("#res-alert").addClass("alert-success");
+                }
+            }
             if ($("#res-alert").hasClass("hidden")) {
                 $("#res-alert").removeClass("hidden");
             }
+            $("#bday-date").val('');
 
         });
 
-        $('#res-modal').on('hidden.bs.modal', function() {
-            $("#bday-date").val('');
-        })
-
+        /**
+         * function to calculate the number and date of the next math birthday
+         */
         CalculateMBDay = function(bday) {
             var presentDate = new Date();
             var MBDate = new Date(bday);
             var oneDay = 24 * 60 * 60 * 1000;
-            var diffDays = Math.round(Math.abs((MBDate.getTime() - presentDate.getTime()) / (oneDay)));
-            if (diffDays == 0) {
+            var diffDays = Math.round((presentDate.getTime() - MBDate.getTime()) / (oneDay));
+
+            if (diffDays < 0) {
+                return {
+                    "error": true,
+                    "message": "there is something odd or you are from the future or your birthday is wrong xD, please input a date from today to the past"
+                }
+            }
+
+
+            if (diffDays == 0 || diffDays == 1) {
                 n = 1;
             } else {
                 var n = Math.ceil(Math.log10(diffDays));
@@ -89,7 +112,8 @@
             MBDate.setDate(MBDate.getDate() + days);
             return {
                 "MBDate": MBDate,
-                "n": n
+                "n": n,
+                error: false
             };
         }
     </script>
