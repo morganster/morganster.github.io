@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { StickyModule } from 'ng2-sticky-kit/ng2-sticky-kit';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -20,7 +21,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    StickyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
