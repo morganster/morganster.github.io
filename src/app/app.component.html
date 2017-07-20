@@ -9,20 +9,25 @@
     <div class="container-fluid">
         <sticky>
             <div class="row res-top-info">
+                <div class="col-md-12" class="top-links">
+                    <a routerLink="/home" routerLinkActive="active">About Me</a>
+                    <a routerLink="/education" routerLinkActive="active">Education</a>
+                    <a routerLink="/experience" routerLinkActive="active">Experience</a>
+                    <a routerLink="/portfolio" routerLinkActive="active">Projects</a>
+                    <a routerLink="/contact" routerLinkActive="active" class="pull-right">Contact</a>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12">
                     <h3 class="titulo text-center">
                         {{title}}
                     </h3>
-                    <button class="btn">About Me</button>
-                    <button class="btn">Skills</button>
-                    <button class="btn">Experiences</button>
-                    <button class="btn">Education</button>
                 </div>
             </div>
         </sticky>
 
 
-        <app-home></app-home>
+        <router-outlet></router-outlet>
 
     </div>
 </body>
