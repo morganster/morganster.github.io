@@ -1,24 +1,25 @@
 
 <template>
   <div>
-    <div class="experience">
-      <h1>Experience</h1>
-      <p>In my career i continually keep myself learning and state updated with new practices, trends and technologies </p>
-      <div class="row" v-for="exp in exps">
-        <div class="col-md-4">
-          <a :href="exp.url" class="text-center">
-            <img class="logo img-responsive img-circle" v-bind:src="exp.logo">
-          </a>
-        </div>
-        <div class="col-md-8">
-          <h1 v-bind:text-content.prop="exp.title"></h1>
-          <h2 v-bind:text-content.prop="exp.duration"></h2>
-          <p v-bind:text-content.prop="exp.description"></p>
+      <div class="row experience">
+        <div class="col-md-12">
+          <h1>Experience</h1>
+          <p>In my career i continually keep myself learning and state updated with new practices, trends and technologies </p>
+          <div class="row" v-for="exp in exps">
+            <div class="col-md-4">
+              <a :href="exp.url" class="text-center">
+                <img class="logo img-responsive img-circle" v-bind:src="exp.logo">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <h1 v-bind:text-content.prop="exp.title"></h1>
+              <h2 v-bind:text-content.prop="exp.duration"></h2>
+              <p v-bind:text-content.prop="exp.description"></p>
+            </div>
+          </div>
         </div>
       </div>
-     
     </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -28,36 +29,37 @@ import Component from 'vue-class-component'
 
 })
 export default class Experience extends Vue {
-  exps= [
+  exps = [
     {
-      logo:"./assets/logo-globant.png",
+      logo: "./assets/logo-globant.png",
       url: "http://www.globant.com",
-      description:"Full stack Developer",
-      title:"Globant - We are ready",
-      duration:"2017 - present",
+      description: "Full stack Developer",
+      title: "Globant - We are ready",
+      duration: "2017 - present",
     },
     {
-      logo:"./assets/logo-tigoune.png",
+      logo: "./assets/logo-tigoune.png",
       url: "http://une.com.co",
-      description:"Full stack Developer,  Design and implementation of indicators for de sales forces in a web application,"
-                    +" design a implementation a html5 mobile application for selling, customer management and all the supply chain for the sales of the company,"
-                   +"this app was built in twitter bootstrap, jquery mobile, CodeIgniter, Mysql on a lamp server",
-      title:"TigoUne",
-      duration:"2011 - 2017",
+      description: "Full stack Developer,  Design and implementation of indicators for de sales forces in a web application,"
+      + " design a implementation a html5 mobile application for selling, customer management and all the supply chain for the sales of the company,"
+      + "this app was built in twitter bootstrap, jquery mobile, CodeIgniter, Mysql on a lamp server",
+      title: "TigoUne",
+      duration: "2011 - 2017",
     },
     {
-      logo:"./assets/logo-edu.png",
+      logo: "./assets/logo-edu.png",
       url: "http://edu.gov.co",
-      description:"Full stack Developer",
-      title:"Empresa de Desarrollo Urbano",
-      duration:"2010 - 2011",
+      description: "Full stack Developer",
+      title: "Empresa de Desarrollo Urbano",
+      duration: "2010 - 2011",
     },
-    
+
   ];
   mounted() {
     console.log("home page");
   }
 }
+Vue.component('experience', Experience)
 </script>
 <style>
 .experience {

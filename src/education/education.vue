@@ -11,11 +11,11 @@ import Component from 'vue-class-component'
 @Component({
 
 })
-export default class Product extends Vue {
-  helloMsg: string = 'Hello, this is the home page';
+export default class Education extends Vue {
+  helloMsg: string = 'Hello, this is the Education page';
   // lifecycle hook
   mounted () {
-    console.log("home page");
   }
 }
+Vue.component('education', Education) // register component globally
 </script>

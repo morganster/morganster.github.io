@@ -12,7 +12,7 @@ module.exports = {
         app: [
             './src/app.ts'
         ],
-        vendor: ["vue", "vue-router", "vue-class-component"]
+        vendor: ["vue", "vue-router", "vue-class-component", "chart.js/dist/Chart.min.js"]
     },
     context: __dirname + "",
     output: {

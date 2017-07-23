@@ -1,42 +1,46 @@
 {
-    "name": "cejl397-resume",
-    "version": "1.0.0",
-    "description": "my online resume",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "webpack-dev-server  --env=dev --config ./webpack.config.js",
-        "build-dev": "webpack  --env=dev --config ./webpack.config.js",
-        "build-prod": "webpack  --env=prod --config ./webpack.config.js"
-    },
-    "author": "",
-    "license": "GPL-3.0",
-    "dependencies": {
-        "animate.css": "^3.5.2",
-        "bootstrap": "^3.3.7",
-        "font-awesome": "^4.7.0",
-        "typescript": "^2.4.1",
-        "vue": "^2.3.4",
-        "vue-class-component": "^5.0.2",
-        "vue-router": "^2.7.0"
-    },
-    "devDependencies": {
-        "copy-webpack-plugin": "^4.0.1",
-        "css-loader": "^0.28.4",
-        "cssnano": "^3.10.0",
-        "extract-text-webpack-plugin": "^3.0.0",
-        "file-loader": "^0.11.2",
-        "html-webpack-plugin": "^2.29.0",
-        "less": "^2.7.2",
-        "less-loader": "^4.0.5",
-        "less-plugin-clean-css": "^1.5.1",
-        "optimize-css-assets-webpack-plugin": "^2.0.0",
-        "ts-loader": "^2.2.2",
-        "tslint": "^5.5.0",
-        "tslint-loader": "^3.5.3",
-        "url-loader": "^0.5.9",
-        "vue-loader": "^12.2.2",
-        "webpack": "^3.1.0",
-        "webpack-dev-server": "^2.5.1"
-    }
+  "name": "cejl397-resume",
+  "version": "1.0.0",
+  "description": "my online resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --env=dev --config ./webpack.config.js",
+    "build-dev": "webpack  --env=dev --config ./webpack.config.js",
+    "build-prod": "webpack  --env=prod --config ./webpack.config.js"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "chart.js": "^2.6.0",
+    "font-awesome": "^4.7.0",
+    "hchs-vue-charts": "^1.2.8",
+    "typescript": "^2.4.1",
+    "vue": "^2.4.2",
+    "vue-class-component": "^5.0.2",
+    "vue-router": "^2.7.0",
+    "vue-template-compiler": "^2.4.2"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "less-plugin-clean-css": "^1.5.1",
+    "loglevel": "^1.4.1",
+    "optimize-css-assets-webpack-plugin": "^2.0.0",
+    "ts-loader": "^2.2.2",
+    "tslint": "^5.5.0",
+    "tslint-loader": "^3.5.3",
+    "url-loader": "^0.5.9",
+    "vue-loader": "^12.2.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
 }

@@ -10,7 +10,7 @@ module.exports = {
         app: [
             './src/app.ts'
         ],
-        vendor: ["vue", "vue-router", "vue-class-component", "bootstrap"]
+        vendor: ["vue", "vue-router", "vue-class-component", "chart.js/dist/Chart.min.js"]
     },
     context: __dirname + "",
     output: {
@@ -61,6 +61,7 @@ module.exports = {
 
         ],
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',

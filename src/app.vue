@@ -10,9 +10,14 @@
       <router-link class="pull-right" to="/contact">Contact</router-link>
     </div>
     <div class="container">
-      <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" :duration="{ enter: 1500, leave: 100 }">
         <router-view></router-view>
-      </transition>
+
+        <home></home>
+        <experience></experience>
+        <education></education>
+        <skills></skills>
+        <projects></projects>
+        <contact></contact>
     </div>
   </div>
 </template>
@@ -47,7 +52,6 @@ export default class App extends Vue {
 </script>
 <style src="bootstrap/less/bootstrap.less" lang="less"></style>
 <style src="font-awesome/css/font-awesome.min.css" lang="css"></style>
-<style src="animate.css/animate.min.css" lang="css"></style>
 <style lang="css">
       @import url('https://fonts.googleapis.com/css?family=Neucha');
 </style>
