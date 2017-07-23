@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <chartjs-horizontal-bar></chartjs-horizontal-bar>
+    <chartjs-horizontal-bar :data="mydata" :labels="mylabels"></chartjs-horizontal-bar>
   </div>
 </template>
 
@@ -13,10 +13,9 @@ import Component from 'vue-class-component'
 
 })
 export default class Skills extends Vue {
-  helloMsg: string = 'Hello, this is the home page';
-  mylabel : string = 'TestDataLabel';
-  mylabels : string[] = ['happy', 'myhappy', 'hello'];
-  mydata : number[] = [100, 40, 60];
+  mylabel : string = 'Skills';
+  mylabels : string[] = ['Angularjs', 'Angular', 'Vuejs','html','css','javascript','typescript'];
+  mydata : number[] = [90, 40, 60,90,90,90,80];
   // lifecycle hook
   mounted () {
     console.log("home page");

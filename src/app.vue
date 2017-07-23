@@ -2,22 +2,20 @@
 <template>
   <div>
     <div class="top-bar">
-      <router-link to="/">Home</router-link>
-      <router-link to="/experience">Experience</router-link>
-      <router-link to="/skills">Skills</router-link>
-      <router-link to="/education">Education</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link class="pull-right" to="/contact">Contact</router-link>
+      <a href="#" v-scroll-to="'#home'">About Me</a>
+      <a href="#" v-scroll-to="'#experience'">Experience</a>
+      <a href="#" v-scroll-to="'#education'">Education</a>
+      <a href="#" v-scroll-to="'#skills'">Skills</a>
+      <a href="#" v-scroll-to="'#projects'">Projects</a>
+      <a href="#" v-scroll-to="'#contact'">Contact</a>
     </div>
     <div class="container">
-        <router-view></router-view>
-
-        <home></home>
-        <experience></experience>
-        <education></education>
-        <skills></skills>
-        <projects></projects>
-        <contact></contact>
+        <home id="home"></home>
+        <experience id="experience"></experience>
+        <education id="education"></education>
+        <skills id="skills"></skills>
+        <projects id="projects"></projects>
+        <contact id="contact"></contact>
     </div>
   </div>
 </template>
