@@ -12,7 +12,7 @@ import Component from 'vue-class-component'
 
 })
 export default class Contact extends Vue {
-  helloMsg: string = 'Hello, this is the Contact page';
+  helloMsg: string = "Let's talk!";
   // lifecycle hook
   mounted () {
   }

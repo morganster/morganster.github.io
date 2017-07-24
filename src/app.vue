@@ -1,13 +1,15 @@
 
 <template>
-  <div>
-    <div class="top-bar">
-      <a href="#" v-scroll-to="'#home'">About Me</a>
-      <a href="#" v-scroll-to="'#experience'">Experience</a>
-      <a href="#" v-scroll-to="'#education'">Education</a>
-      <a href="#" v-scroll-to="'#skills'">Skills</a>
-      <a href="#" v-scroll-to="'#projects'">Projects</a>
-      <a href="#" v-scroll-to="'#contact'">Contact</a>
+<div>
+  <div class="top-bar">
+  <div class="container">
+      <a href="#" class="r-links" v-scroll-to="'#home'">About Me</a>
+      <a href="#" class="r-links" v-scroll-to="'#experience'">Experience</a>
+      <a href="#" class="r-links" v-scroll-to="'#education'">Education</a>
+      <a href="#" class="r-links" v-scroll-to="'#skills'">Skills</a>
+      <a href="#" class="r-links" v-scroll-to="'#projects'">Projects</a>
+      <a href="#" class="pull-right r-links" v-scroll-to="'#contact'">Contact</a>
+    </div>
     </div>
     <div class="container">
         <home id="home"></home>
@@ -53,13 +55,15 @@ export default class App extends Vue {
 <style lang="css">
       @import url('https://fonts.googleapis.com/css?family=Neucha');
 </style>
-<style lang="css">
+<style lang="less">
 .top-bar {
   position: fixed;
   width: 100%;
   top: 0;
   background-color: #595959;
   z-index: 10;
+  line-height: 2.5em;
+  height: 2.5em;
 }
 
 .router-link-exact-active {
@@ -70,6 +74,13 @@ a {
   text-decoration: none;
   color: #fdfdfd;
   font-size: 1.4em;
+  &.r-links{
+    &:hover{
+       text-decoration: none;
+       font-weight: bold;
+       color:#efefef;
+    }
+  }
 }
 
 body {
