@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class="animated fadeInRight">
       <div class="row experience">
         <div class="col-md-12">
           <h1 class="text-center">Experience</h1>
@@ -74,7 +74,7 @@ Vue.component('experience', Experience)
 }
 
 .text-secondary{
-  color:#333;
+  color:#454545;
 }
 
 .text-bold{

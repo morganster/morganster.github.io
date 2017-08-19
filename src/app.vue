@@ -7,8 +7,6 @@
       <a href="#" class="r-links" v-scroll-to="'#experience'">Experience</a>
       <a href="#" class="r-links" v-scroll-to="'#education'">Education</a>
       <a href="#" class="r-links" v-scroll-to="'#skills'">Skills</a>
-      <a href="#" class="r-links" v-scroll-to="'#projects'">Projects</a>
-      <a href="#" class="pull-right r-links" v-scroll-to="'#contact'">Contact</a>
     </div>
     </div>
     <div class="container">
@@ -16,8 +14,6 @@
         <experience id="experience"></experience>
         <education id="education"></education>
         <skills id="skills"></skills>
-        <projects id="projects"></projects>
-        <contact id="contact"></contact>
     </div>
   </div>
 </template>
@@ -52,8 +48,9 @@ export default class App extends Vue {
 </script>
 <style src="bootstrap/less/bootstrap.less" lang="less"></style>
 <style src="font-awesome/css/font-awesome.min.css" lang="css"></style>
+<style src="animate.css/animate.min.css" lang="css"></style>
 <style lang="css">
-      @import url('https://fonts.googleapis.com/css?family=Neucha');
+     @import url('https://fonts.googleapis.com/css?family=Dosis');
 </style>
 <style lang="less">
 .top-bar {
@@ -75,8 +72,14 @@ a {
   color: #fdfdfd;
   font-size: 1.4em;
   &.r-links{
+    padding-left: 0.5em; 
     &:hover{
        text-decoration: none;
+       font-weight: bold;
+       color:#efefef;
+    }
+    &:focus{
+      text-decoration: none;
        font-weight: bold;
        color:#efefef;
     }
@@ -85,6 +88,16 @@ a {
 
 body {
   background-color: #efefef;
-  font-family: 'Neucha', cursive;
+  font-family: 'Dosis', cursive;
+  color: #454545;
+}
+h1{
+  color: #3e3e3e;
+}
+h3{
+  color: #454545;
+}
+p{
+  color: #454545;
 }
 </style>
