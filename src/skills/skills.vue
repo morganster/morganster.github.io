@@ -63,7 +63,6 @@ export default class Skills extends Vue {
 
   // lifecycle hook
   mounted() {
-    console.log("home page");
   }
 }
 Vue.component('skills', Skills)

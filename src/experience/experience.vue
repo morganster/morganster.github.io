@@ -56,7 +56,7 @@ export default class Experience extends Vue {
 
   ];
   mounted() {
-    console.log("home page");
+    console.log("yep, this page was done in vuejs :P");
   }
 }
 Vue.component('experience', Experience)
