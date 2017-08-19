@@ -31,7 +31,7 @@ export default class Skills extends Vue {
             data: [40, 20]}];*/
   myBackgroundColor: string[] = ["#a6120d","#dd0031", "#41b883","#f47933","#008fd5","#faab4b","#0074c1"];
   myBackgroundColorSecond: string[] = ["#017495","#777bb4", "#35c1e6","#90c53f","#707070","#7d9ede","#010101"];
-  mydataSecond: number[] = [90, 90, 70, 90, 95, 90, 80];
+  mydataSecond: number[] = [90, 90, 76, 70, 65, 80, 85];
   myOption = {
      legend: {
             display: false,
