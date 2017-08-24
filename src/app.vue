@@ -46,7 +46,6 @@ export default class App extends Vue {
   }
 }
 </script>
-<style src="bootstrap-vue/dist/bootstrap-vue.css" lang="css"></style>
 <style src="font-awesome/css/font-awesome.min.css" lang="css"></style>
 <style src="animate.css/animate.min.css" lang="css"></style>
 <style lang="css">
