@@ -51,6 +51,16 @@ module.exports = {
                 }]
             },
             {
+                test: /\.sass$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "sass-loader" // compiles Less to CSS
+                }]
+            },
+            {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "url-loader?limit=10000&mimetype=application/font-woff"
             },

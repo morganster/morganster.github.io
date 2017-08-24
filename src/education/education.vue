@@ -1,8 +1,12 @@
 
 <template>
-  <div>
+  <div class="animated zoomIn">
     <div class="row education">
-    <h1 class="text-center">{{helloMsg}}</h1>
+      <div class="col-md-12">
+        <h1 class="text-center">{{helloMsg}}</h1>
+      </div>
+    </div>
+    <div class="row education">
       <div class="col-md-4" v-for="edu in education">
         <h3 v-bind:text-content.prop="edu.year"></h3>
         <h3 v-bind:text-content.prop="edu.place"></h3>
@@ -44,8 +48,8 @@ export default class Education extends Vue {
 Vue.component('education', Education) // register component globally
 </script>
 <style>
-  .education{
-    padding: 2em;
-    background-color: #e8e8e8;
-  }
+.education {
+  padding: 2em;
+  background-color: #e8e8e8;
+}
 </style>

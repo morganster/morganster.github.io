@@ -46,13 +46,14 @@ export default class App extends Vue {
   }
 }
 </script>
-<style src="bootstrap/less/bootstrap.less" lang="less"></style>
+<style src="bootstrap-vue/dist/bootstrap-vue.css" lang="css"></style>
 <style src="font-awesome/css/font-awesome.min.css" lang="css"></style>
 <style src="animate.css/animate.min.css" lang="css"></style>
 <style lang="css">
      @import url('https://fonts.googleapis.com/css?family=Dosis');
 </style>
-<style lang="less">
+<style lang="scss">
+@import '~bootstrap/scss/bootstrap.scss';
 .top-bar {
   position: fixed;
   width: 100%;
@@ -70,7 +71,7 @@ export default class App extends Vue {
 a {
   text-decoration: none;
   color: #fdfdfd;
-  font-size: 1.4em;
+  font-size: 1.8em;
   &.r-links{
     padding-left: 0.5em; 
     &:hover{
@@ -92,12 +93,20 @@ body {
   color: #454545;
 }
 h1{
+  font-size: 3em;
   color: #3e3e3e;
 }
 h3{
   color: #454545;
 }
 p{
+  font-size: 1.8em;
   color: #454545;
+}
+
+@include media-breakpoint-down(md) {
+  .container {
+      max-width: 100%;
+   }
 }
 </style>

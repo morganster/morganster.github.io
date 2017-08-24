@@ -1,8 +1,12 @@
 
 <template>
-  <div class="animated fadeInLeft">
+  <div class="animated zoomIn">
+     <div class="row skills">
+      <div class="col-md-12">
+           <h1 class="text-center">Skills</h1>
+      </div>
+    </div>
     <div class="row skills">
-    <h1 class="text-center">Skills</h1>
       <div class="col-md-6">
         <chartjs-horizontal-bar :data="myData" :datalabel="mylabel" :labels="mylabels" :bordercolor="myBackgroundColor" :backgroundcolor="myBackgroundColor" :option="myOption" ></chartjs-horizontal-bar>
       </div>
