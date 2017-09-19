@@ -9368,7 +9368,7 @@ a.text-dark:focus, a.text-dark:hover {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #595959;
+  background-color: #4390bc;
   z-index: 10;
   line-height: 2.5em;
   height: 2.5em;
@@ -9376,23 +9376,22 @@ a.text-dark:focus, a.text-dark:hover {
 .router-link-exact-active {
   font-weight: bold;
 }
-a {
+.r-links {
   text-decoration: none;
-  color: #fdfdfd;
+  color: #ffffff;
   font-size: 1.8em;
+  display: inline;
+  padding-left: 0.5em;
 }
-a.r-links {
-    padding-left: 0.5em;
+.r-links:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #efefef;
 }
-a.r-links:hover {
-      text-decoration: none;
-      font-weight: bold;
-      color: #efefef;
-}
-a.r-links:focus {
-      text-decoration: none;
-      font-weight: bold;
-      color: #efefef;
+.r-links:focus {
+    text-decoration: none;
+    font-weight: bold;
+    color: #efefef;
 }
 body {
   background-color: #efefef;
@@ -9413,6 +9412,32 @@ p {
 @media (max-width: 991px) {
 .container {
     max-width: 100%;
+}
+.top-bar {
+    height: 9.5em;
+}
+.link-text {
+    display: none;
+}
+.r-links {
+    height: 5.3em;
+    vertical-align: middle;
+    line-height: 6.5em;
+    border-right: solid #efefef 1px;
+}
+.r-links:active {
+      background-color: #68a7ca;
+}
+.fa-icon {
+    display: inline-block;
+    font-size: 3em;
+}
+.main-content {
+    margin-top: 8.3em;
+}
+.social-links .fa {
+    padding: 0 1em;
+    font-size: 4em;
 }
 }
 
@@ -9445,14 +9470,21 @@ p {
   background-color: #fff;
   color: #333;
 }
+.skill-col{
+  margin-bottom: 2em;
+}
 
 .intro {
   background-color: #e8e8e8;
   padding: 3em;
 }
-.about-me{
+.about-me {
   padding: 1em;
 }
 .social-links {
   color: #33a9b1;
+}
+.social-links .fa {
+  font-size: 1.8em;
+  padding: 0 0.1em;
 }
