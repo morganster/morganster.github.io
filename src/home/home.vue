@@ -45,7 +45,7 @@ export default class Home extends Vue {
 }
 Vue.component('home', Home)
 </script>
-<style lang="css">
+<style lang="less">
 .intro {
   background-color: #e8e8e8;
   padding: 3em;
@@ -56,5 +56,9 @@ Vue.component('home', Home)
 
 .social-links {
   color: #33a9b1;
+  & .fa{
+    font-size: 1.8em;
+    padding: 0 0.1em;
+  }
 }
 </style>

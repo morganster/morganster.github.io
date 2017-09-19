@@ -7,10 +7,10 @@
       </div>
     </div>
     <div class="row skills">
-      <div class="col-md-6">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 skill-col">
         <chartjs-horizontal-bar :data="myData" :datalabel="mylabel" :labels="mylabels" :bordercolor="myBackgroundColor" :backgroundcolor="myBackgroundColor" :option="myOption" ></chartjs-horizontal-bar>
       </div>
-      <div class="col-md-6">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 skill-col">
             <chartjs-horizontal-bar :data="mydataSecond" :datalabel="mylabel" :option="myOption" :labels="mylabelsSecond" :bordercolor="myBackgroundColorSecond" :backgroundcolor="myBackgroundColorSecond" ></chartjs-horizontal-bar>
       </div>
     </div>
@@ -76,5 +76,8 @@ Vue.component('skills', Skills)
    padding: 2em;
   background-color: #fff;
   color: #333;
+}
+.skill-col{
+  margin-bottom: 2em;
 }
 </style>
