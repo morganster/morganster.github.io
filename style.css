@@ -9409,6 +9409,13 @@ p {
   font-size: 1.8em;
   color: #454545;
 }
+.social-links {
+  color: #33a9b1;
+}
+.social-links .fa {
+    font-size: 1.8em;
+    padding: 0 0.1em;
+}
 @media (max-width: 991px) {
 .container {
     max-width: 100%;
@@ -9483,11 +9490,4 @@ p {
 }
 .about-me {
   padding: 1em;
-}
-.social-links {
-  color: #33a9b1;
-}
-.social-links .fa {
-  font-size: 1.8em;
-  padding: 0 0.1em;
 }
