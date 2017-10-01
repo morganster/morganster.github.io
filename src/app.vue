@@ -3,19 +3,19 @@
   <div>
     <div class="top-bar">
       <div class="row">
-        <div class="r-links col-md-3 text-center"  v-scroll-to="'#home'">
+        <div class="r-links col-3 col-md-3 text-center"  v-scroll-to="'#home'">
             <span class="link-text">About Me</span>
             <span class="fa fa-user fa-icon"></span>
         </div>
-        <div class="r-links col-md-3 text-center" v-scroll-to="'#experience'">
+        <div class="r-links col-3 col-md-3 text-center" v-scroll-to="'#experience'">
             <span class="link-text">Experience</span>
             <span class="fa fa-road fa-icon">&nbsp</span>
         </div>
-        <div class="r-links col-md-3 text-center" v-scroll-to="'#education'">
+        <div class="r-links col-3 col-md-3 text-center" v-scroll-to="'#education'">
             <span class="link-text">Education</span>
             <span class="fa fa-university fa-icon"></span>
         </div>
-        <div class="r-links col-md-3 text-center" v-scroll-to="'#skills'">
+        <div class="r-links col-3 col-md-3 text-center" v-scroll-to="'#skills'">
             <span class="link-text">Skills</span>
             <span class="fa fa-line-chart fa-icon"></span>
         </div>
@@ -117,6 +117,13 @@ h3 {
 p {
   font-size: 1.8em;
   color: #454545;
+}
+.social-links {
+  color: #33a9b1;
+  & .fa{
+    font-size: 1.8em;
+    padding: 0 0.1em;
+  }
 }
 
 @include media-breakpoint-down(md) {

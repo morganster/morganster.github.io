@@ -8,7 +8,6 @@ var Contact = require('./contact/contact.vue').default;
 var Projects = require('./projects/projects.vue').default;
 var Skills = require('./skills/skills.vue').default;
 var Home = require('./home/home.vue').default;
-Vue.use((window as any).VueCharts);
 Vue.use(VueScrollTo);
 
 // tslint:disable-next-line:no-unused-expression

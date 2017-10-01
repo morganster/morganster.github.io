@@ -54,11 +54,5 @@ Vue.component('home', Home)
   padding: 1em;
 }
 
-.social-links {
-  color: #33a9b1;
-  & .fa{
-    font-size: 1.8em;
-    padding: 0 0.1em;
-  }
-}
+
 </style>
