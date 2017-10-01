@@ -9381,6 +9381,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: #ffffff;
   font-size: 1.8em;
   display: inline;
+  cursor: pointer;
   padding-left: 0.5em;
 }
 .r-links:hover {
@@ -9474,6 +9475,7 @@ p {
 
 .icon{
   padding: 2em;
+  line-height: 8em;
 }
 .skills {
    padding: 2em;
