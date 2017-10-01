@@ -91,6 +91,7 @@ Vue.component('skills', Skills)
 <style>
 .icon{
   padding: 2em;
+  line-height: 8em;
 }
 .skills {
    padding: 2em;

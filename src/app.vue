@@ -82,9 +82,10 @@ export default class App extends Vue {
 
 .r-links {
     text-decoration: none;
-  color: #ffffff;
-  font-size: 1.8em;
-  display: inline;
+    color: #ffffff;
+    font-size: 1.8em;
+    display: inline;
+    cursor: pointer;
     padding-left: 0.5em;
     &:hover {
       text-decoration: none;
