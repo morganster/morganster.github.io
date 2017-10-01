@@ -9465,6 +9465,9 @@ p {
   background-color: #00377B;
 }
 
+.icon{
+  padding: 2em;
+}
 .skills {
    padding: 2em;
   background-color: #fff;
