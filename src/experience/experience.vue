@@ -8,7 +8,7 @@
         <div class="row" v-for="exp in exps">
           <div class="col-md-12 text-center">
             <a :href="exp.url">
-              <img class="logo img-fluid rounded-circle" v-bind:src="exp.logo">
+              <img class="logo img-fluid img-round" v-bind:src="exp.logo">
             </a>
           </div>
           <div class="row">
@@ -33,7 +33,7 @@ import Component from 'vue-class-component'
 export default class Experience extends Vue {
   exps = [
     {
-      logo: "./assets/logo-globant.png",
+      logo: "./assets/logo-globant.svg",
       url: "http://www.globant.com",
       description: "Web UI Developer, Implementation of client side behaviour, and visual designs using frontend frameworks like Bootstrap, Angularjs, Angular.",
       title: "Globant",
@@ -49,7 +49,7 @@ export default class Experience extends Vue {
       duration: "2011 - 2017",
     },
     {
-      logo: "./assets/logo-edu.png",
+      logo: "./assets/logo-edu.svg",
       url: "http://edu.gov.co",
       description: 'Full stack Developer, Design, Mainteinance and implementation of a system to track, follow and manage construction projects for the local goverment. '
       + 'this projects were achieved using mysql,codeigniter and for the client side JQuery, JQuery UI.',
@@ -72,7 +72,9 @@ Vue.component('experience', Experience)
 }
 
 .logo {
-  padding: 1em;
+  padding: 2em;
+  margin-top: 2em;
+  margin-botton: 2em;
   width: 50%;
 }
 
