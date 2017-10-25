@@ -74,7 +74,7 @@ Vue.component('experience', Experience)
 .logo {
   padding: 2em;
   margin-top: 2em;
-  margin-botton: 2em;
+  margin-bottom: 2em;
   width: 50%;
 }
 
