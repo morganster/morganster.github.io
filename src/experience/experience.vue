@@ -13,7 +13,7 @@
           </div>
           <div class="row">
           <div class="col-md-12">
-            <h1 class="text-center" v-bind:text-content.prop="exp.title"></h1>
+            <!--<h1 class="text-center" v-bind:text-content.prop="exp.title"></h1>-->
             <h3 class="text-secondary" v-bind:text-content.prop="exp.duration"></h3>
             <p class="text-secondary" v-bind:text-content.prop="exp.description"></p>
           </div>
@@ -40,7 +40,7 @@ export default class Experience extends Vue {
       duration: "2017 - present",
     },
     {
-      logo: "./assets/logo-tigoune.png",
+      logo: "./assets/logo-tigoune.svg",
       url: "http://une.com.co",
       description: "Full stack Developer,  Design and implementation of indicators for de sales forces in a web application,"
       + " design a implementation a html5 mobile application for selling, customer management and all the supply chain for the sales of the company,"
