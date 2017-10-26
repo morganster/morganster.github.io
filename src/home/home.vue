@@ -24,11 +24,9 @@
       <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 about-me">
   
         <h1 class="text-center">Welcome to my online resume</h1>
-        <p>Hello, i am a front end developer with some knowledge in others areas like backend and servers, my main field of work is the front end, 
-          in my career i have developed a wide range web applications built on top of mvc php frameworks like codeiginiter, yiiframework,
-          using frontend technologies like jquery-ui, bootstrap and AngularJS and also have applied these technologies to HTML5 hybrid mobile development
-          with ionic framework and also I have developed skills in apple swift for native iOS development. i'm  always seeking better ways to do 
-          amazing apps and websites using latest technologies and usability patterns.</p>
+        <p>Hi, I'm a passionate front end developer, who always tries to make incredible web applications that impact and love many people.
+my main skills are angular, vuejs, html5, javascript, typscript, css and taskers like gulp, webpack etc. with enough experience with backend languages like php with codeigniter, yii and symfony and databases like mysql, sql server. 
+and well I also have some knowledge of apple swift xD.</p>
       </div>
     </div>
   </div>
